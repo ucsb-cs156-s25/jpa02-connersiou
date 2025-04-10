@@ -48,6 +48,12 @@ public class TeamTest {
         other.addMember("test-member");
         assertEquals(false, team.equals(other));
     }
+    
+    @Test
+    public void equals_returns_false_different_name_same_members() {
+        Team other = new Team("test-team2");
+        assertEquals(false, team.equals(other));
+    }
 
     @Test
     public void hashCode_returns_correct_hashCode() {
